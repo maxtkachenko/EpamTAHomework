@@ -20,7 +20,6 @@ public class HomePage extends BasePage{
 
     //methods
     public void searchByKeyWord(String keyword) {
-        //searchIcon.click();
         searchInput.sendKeys(keyword);
         d.findElement(By.xpath(SEARCH_BUTTON)).click();
     }

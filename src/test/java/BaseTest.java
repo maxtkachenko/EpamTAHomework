@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-import java.util.Objects;
 
 public class BaseTest {
+
     private WebDriver driver;
 
     @BeforeTest
@@ -20,6 +20,7 @@ public class BaseTest {
 
     @AfterTest
     public void tearDownTest() {     driver.quit();    }
+
     //getter
     public WebDriver getDriver() {
         return driver;

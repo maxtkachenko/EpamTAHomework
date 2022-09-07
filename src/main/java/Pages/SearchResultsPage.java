@@ -8,10 +8,11 @@ import java.util.List;
 
 public class SearchResultsPage extends  BasePage{
 
-
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
+
+
     //elements
     @FindBy(xpath = "//div[@class='prod-cart__descr']")
     private List<WebElement> searchResults;
