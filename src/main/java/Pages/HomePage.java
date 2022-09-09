@@ -24,6 +24,8 @@ public class HomePage extends BasePage{
     private WebElement homePageTitle;
     @FindBy (xpath = "//a[@href='/ua/brand-samsung']")
     private WebElement samsungPageLink;
+    @FindBy(xpath = "(//div[@class='header-bottom__right-icon'])[1]")
+    private WebElement signInLink;
 
 
 
@@ -38,6 +40,9 @@ public class HomePage extends BasePage{
     }
     public WebElement getSamsungPageLink() {
         return samsungPageLink;
+    }
+    public WebElement getSignInPageLink() {
+        return signInLink;
     }
 
 

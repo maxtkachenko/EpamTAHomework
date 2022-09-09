@@ -9,5 +9,10 @@ public class NavigationTest extends BaseTest{
         getHomepage().implicitWait(10);
         Assert.assertTrue(getDriver().getCurrentUrl().contains("brand-samsung"));
     }
-
+    @Test
+    public void navigateTosignInPage(){
+        getHomepage().getSignInPageLink().click();
+        getHomepage().implicitWait(10);
+        Assert.assertTrue(getDriver().getCurrentUrl().contains("sign-in"));
+    }
 }

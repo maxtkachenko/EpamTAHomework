@@ -1,5 +1,6 @@
 import Pages.HomePage;
 import Pages.SearchResultsPage;
+import Pages.SignInPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -29,6 +30,10 @@ public class BaseTest {
     //methods for creation pages instance
     public HomePage getHomepage() {
         return new HomePage(driver);
+    }
+
+    public SignInPage getSignInPage() {
+        return new SignInPage(getDriver());
     }
 
     public SearchResultsPage getSearchResultsPage() {
