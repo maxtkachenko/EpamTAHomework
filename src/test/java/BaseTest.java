@@ -34,5 +34,4 @@ public class BaseTest {
     public SearchResultsPage getSearchResultsPage() {
         return new SearchResultsPage(getDriver());
     }
-
 }

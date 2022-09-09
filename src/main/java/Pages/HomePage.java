@@ -18,10 +18,35 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "///div[@class='mobile-icon']//i[@class='icon icon-search']")
     private WebElement searchIcon;
 
+    @FindBy(xpath = "//div[@class = 'top-links__left flex-wrap']//a[contains(text(), ' iPhone 13')]")
+    private WebElement iphoneHotSaleLink;
+    @FindBy(xpath = "/html/head/title/text()")
+    private WebElement homePageTitle;
+    @FindBy (xpath = "//a[@href='/ua/brand-samsung']")
+    private WebElement samsungPageLink;
+
+
+
+
+
+    //getters
+    public WebElement getPhoneHotSaleLink() {
+        return iphoneHotSaleLink;
+    }
+    public WebElement getTitleText() {
+        return homePageTitle;
+    }
+    public WebElement getSamsungPageLink() {
+        return samsungPageLink;
+    }
+
+
+
     //methods
     public void searchByKeyWord(String keyword) {
         searchInput.sendKeys(keyword);
         d.findElement(By.xpath(SEARCH_BUTTON)).click();
     }
+
 
 }
