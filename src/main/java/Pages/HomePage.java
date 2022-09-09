@@ -27,10 +27,6 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "(//div[@class='header-bottom__right-icon'])[1]")
     private WebElement signInLink;
 
-
-
-
-
     //getters
     public WebElement getPhoneHotSaleLink() {
         return iphoneHotSaleLink;
@@ -45,13 +41,9 @@ public class HomePage extends BasePage{
         return signInLink;
     }
 
-
-
     //methods
     public void searchByKeyWord(String keyword) {
         searchInput.sendKeys(keyword);
         d.findElement(By.xpath(SEARCH_BUTTON)).click();
     }
-
-
 }

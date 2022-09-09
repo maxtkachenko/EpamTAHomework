@@ -20,7 +20,7 @@ public class SignInPage extends BasePage{
     @FindBy(xpath = "(//input[@name='remember'])[1]")
     private WebElement rememberMeCheckBox;
 
-    @FindBy(xpath = "//button[@class='button-reset main-btn submit main-btn--green']")
+    @FindBy(xpath = "button[@class='button-reset main-btn submit main-btn--green']")
     private WebElement submitButton;
 
     @FindBy(xpath = "//a[@class='btn-password fancybox']")
@@ -31,6 +31,9 @@ public class SignInPage extends BasePage{
 
     @FindBy(xpath = "//div[@class='form-field input-field flex error']")
     private WebElement errorMsg;
+
+    @FindBy(xpath = "//div[@class='ttl js_title']")
+    private WebElement errorPopupAuthorization;
 
     public WebElement getForgotPasswordLink() {
         return forgotPasswordLink;
